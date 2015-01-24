@@ -1,7 +1,7 @@
 ﻿{
-    "version": "1.0.0-*",
+    "version": "1.0.0-beta2",
     "dependencies": {
-        "Microsoft.Framework.Logging": "1.0.0-*",
+        "Microsoft.Framework.Logging": "1.0.0-beta2",
         "Serilog": "1.4.14"
     },
     "frameworks": {

@@ -1,5 +1,5 @@
 {
-    "version": "1.0.0-*",
+    "version": "1.0.0-beta2",
     "description": "Logging infrastructure.",
     "compilationOptions": {
         "define": [ "TRACE" ]
@@ -7,27 +7,27 @@
     "frameworks": {
         "net45": {
             "dependencies": {
-                "Microsoft.Framework.Logging.Interfaces": "1.0.0-*"
+                "Microsoft.Framework.Logging.Interfaces": "1.0.0-beta2"
             }
         },
         "aspnet50": {
             "dependencies": {
-                "Microsoft.Framework.Logging.Interfaces": { "version": "1.0.0-*", "type": "build" }
+                "Microsoft.Framework.Logging.Interfaces": { "version": "1.0.0-beta2", "type": "build" }
             }
         },
         "aspnetcore50": {
             "dependencies": {
-                "System.Collections.Concurrent": "4.0.10-beta-*",
-                "System.Diagnostics.TraceSource": "4.0.0-beta-*",
-                "System.Globalization": "4.0.10-beta-*",
-                "System.Linq": "4.0.0-beta-*",
-                "System.Threading": "4.0.0-beta-*",
-                "Microsoft.Framework.Logging.Interfaces": { "version": "1.0.0-*", "type": "build" }
+                "System.Collections.Concurrent": "4.0.10-beta-22416",
+                "System.Diagnostics.TraceSource": "4.0.0-beta-22416",
+                "System.Globalization": "4.0.10-beta-22416",
+                "System.Linq": "4.0.0-beta-22416",
+                "System.Threading": "4.0.0-beta-22416",
+                "Microsoft.Framework.Logging.Interfaces": { "version": "1.0.0-beta2", "type": "build" }
             }
         },
         ".NETPortable,Version=v4.6,Profile=Profile151": {
             "dependencies": {
-                "Microsoft.Framework.Logging.Interfaces": "1.0.0-*"
+                "Microsoft.Framework.Logging.Interfaces": "1.0.0-beta2"
             },
             "frameworkAssemblies": {
                 "System.Collections": "",

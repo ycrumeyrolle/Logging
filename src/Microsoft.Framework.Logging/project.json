@@ -20,7 +20,8 @@
                 "Microsoft.Framework.Logging.Interfaces": { "version": "1.0.0-*", "type": "build" }
             },
             "frameworkAssemblies": {
-                "System.Collections.Concurrent": ""
+                "System.Collections.Concurrent": "",
+                "System.Reflection":"" 
             }
         },
         "aspnetcore50": {
@@ -30,6 +31,7 @@
                 "System.Globalization": "4.0.10-beta-*",
                 "System.Linq": "4.0.0-beta-*",
                 "System.Threading": "4.0.10-beta-*",
+                "System.Reflection": "4.0.10-beta-*",
                 "Microsoft.Framework.Logging.Interfaces": { "version": "1.0.0-*", "type": "build" }
             }
         },

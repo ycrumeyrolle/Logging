@@ -21,7 +21,7 @@
             },
             "frameworkAssemblies": {
                 "System.Collections.Concurrent": "",
-                "System.Reflection":"" 
+                "System.Reflection": ""
             }
         },
         "aspnetcore50": {

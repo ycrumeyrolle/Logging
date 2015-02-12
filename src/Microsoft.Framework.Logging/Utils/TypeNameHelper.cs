@@ -20,16 +20,16 @@ namespace Microsoft.Framework.Logging
         {
             if (args.Length > 0)
             {
-                ConstructorTypeString("<", sb);
+                sb.Append("<");
                 for (int i = 0; i < args.Length; i++)
                 {
                     ProcessTypeName(args[i], sb);
                     if (i + 1 < args.Length)
                     {
-                        ConstructorTypeString(", ", sb);
+                        sb.Append(", ");
                     }
                 }
-                ConstructorTypeString(">", sb);
+                sb.Append(">");
             }
         }
 
@@ -51,17 +51,17 @@ namespace Microsoft.Framework.Logging
         {
             if (t.IsGenericParameter)
             {
-                ConstructorTypeString(t.GetTypeInfo().Name, sb);
+                sb.Append(t.GetTypeInfo().Name);
                 return;
             }
             if (t.GetTypeInfo().IsGenericType)
             {
                 var mostGenericTypeDefinition = GetMostGenericTypeDefinition(t);
-                ConstructorTypeString(mostGenericTypeDefinition, sb);
+                sb.Append(GetSimpleGenericTypeName(mostGenericTypeDefinition));
                 AppendGenericArguments(t.GetTypeInfo().GenericTypeArguments, sb);
                 return;
             }
-            ConstructorTypeString(t, sb);
+            sb.Append(GetSimpleGenericTypeName(t));
         }
 
         private static string GetSimpleGenericTypeName(Type t)
@@ -77,17 +77,6 @@ namespace Microsoft.Framework.Logging
                 return text.Substring(0, num);
             }
             return text;
-        }
-
-        private static void ConstructorTypeString(object typeInfo, StringBuilder sb)
-        {
-            if (typeInfo is string)
-            {
-                sb.Append(typeInfo.ToString());
-                return;
-            }
-
-            sb.Append(GetSimpleGenericTypeName((Type)typeInfo));
         }
     }
 }
